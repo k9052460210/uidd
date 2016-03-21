@@ -1,55 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<style>
-			#navorange {
-				background-color:#FF3303;
-   				width:219px;
-				height:78px;
-   				position:left;
-    			}	
-			#navyellow {
-				background-color:#FECB16;
-   				width:219px;
-				height:104px;
-   				position:left;
-    			}
-			#navorangebar {
-				background-color:#FF3303;
-   				width:219px;
-				height:37px;
-   				position:left;
-				color:white;
-				font-size:100%;
-				font-weight:bold;
-				text-align:center;
-				line-height:35px;
-    			}	
-			//.triangle {
-    			border-left: 205px solid white;
-    			border-bottom: 205px solid #FF3303;
-    			border-right: 205px solid white;
-   				display: inline-block;
-				float:right;
-				}
-			    			
-		</style>
-	</head>
-	<body>
-		<div id="navorange" ></div>
-		<div id="navyellow" ></div>
-		<div id="navorangebar">Ãö©ó«n¿³</div>
-		<div class="triangle"></div>
-		<img src="MAP.png" alt="MAP" style="width:409px;height:507px;float:right">
-		<div id="navyellow"></div>
-		<div id="navorangebar">¥«³õ¾ÉÄı</div>
-		<div id="navyellow"></div>
-		<div id="navorangebar">¦a¹Ï¸ê°T</div>
-		<div id="navyellow"></div>
-		<div id="navorangebar">ªñ´Á¬¡°Ê</div>
-		<div id="navyellow"></div>
-		<img src="i1_u7.jpg" alt="grandma killing price" style="width:606px;height:575px;position:absolute;top:50%;left:50%;margin:-303px 0 0 -287.5px;">
-		<div class="map"></div>
-	</body>
+<head>
+<meta charset="utf-8">
+<title>åŸºéš†å—èˆˆå¸‚å ´</title>
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+	$('#slider').cycle({ 
+    fx:     'scrollHorz', 
+    speed:  'slow', 
+    next:   '#next', 
+    prev:   '#prev' 
+});
+</script>
+<style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+body{
+	width:100%;
+	margin:auto;
+	font-family: 'Noto Sans TC', sans-serif;
+	background-color:#E6E6E6;
+	}
+.container1{
+	width:960px;
+	margin:0 auto;
+	}
+.header{
+	background:#FFFFFF;
+	width:100%;
+	top:0;
+	position:relative;
+	}
+.logo{
+	float:left;
+	padding-top:30px;
+	}
+a{
+	text-decoration:none;
+	color:#26797B;
+	}
+a:hover { 
+    color: #26C980;
+}
+li{
+	list-style:none;
+	float:left;
+	margin-left:40px;
+	padding-top:80px;
+	}
+.nav{
+	float:right;
+	}
+#wrapper {
+	display: block;
+	height: 720px;
+	margin: auto;
+	width: 960px;
+	}
+#container {
+	background-color: #27E394;
+	display: block;
+	width: 960px;
+	height: 720px;
+	float: left;
+	overflow: auto;
+}
+#prev{
+	background-image:url(img/prev.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	display:block;
+	float:left;
+	height:720px;
+	width:100px;
+	position:relative;
+	z-index:99;
+	}
+#next{
+	background-image:url(img/next.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	display:block;
+	float:right;
+	height:720px;
+	width:100px;
+	position:relative;
+	z-index:99;
+	}
+#slider{
+	display:block;
+	float:left;
+	height:720px;
+	width:960px;
+	overflow:hidden;
+	position:absolute;
+	}
+#blank{
+	width:100%;
+	height:50px;
+	position:relative;
+	float:left;
+	}
+hr{
+	width:960px;
+	background-color:#26797B;
+	color:#26797B;
+	height:3px;
+	}
+.footer{
+    background-color:#CCC;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+	position:relative;
+	}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="container1">
+  	<div class="logo">
+    <a href="#"><img src="img/logo-02.png" width="300" height="80.88" alt=""/> </a></div>
+    <div class="nav">
+    	<ul>
+        	<li><a href="#">é—œæ–¼å—èˆˆ</a></li>
+            <li><a href="#">å¸‚å ´å°è¦½</a></li>
+            <li><a href="#">åœ°åœ–è³‡è¨Š</a></li>
+            <li><a href="#">è¿‘æœŸæ´»å‹•</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<div id="blank">
+	<p></p>
+  <hr>
+   
+</div>
+
+<div id="wrapper">
+      <div id="container">
+        <div class="controller" id="prev"></div>
+        <div id="slider">
+        <img src="img/1.jpg" width="960" height="720" alt=""/>
+        <img src="img/2.jpg" width="960" height="720" alt=""/>
+        <img src="img/3.jpg" width="960" height="720" alt=""/>
+        </div>
+        <div class="controller" id="next"></div>
+      </div>
+    </div>
+<div id="blank">
+	<p></p>
+</div>
+
+<div class="footer">
+<p><br>
+Page designed by Chu Shao-Fan<br>
+all right reserved</p>
+</div>
+</body>
 </html>
